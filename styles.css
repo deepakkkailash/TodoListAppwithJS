@@ -1,0 +1,57 @@
+
+body{
+    background-color: black;
+    box-sizing: border-box;
+}
+
+.container{
+    position: absolute;
+    top:30vh;
+    left:20vw;
+    background-color: white;
+    border-radius: 12px;
+    width:50%;
+    height:40%;
+}
+
+.flex-box{
+    position: absolute;
+    width: 100%;
+    top:35vh;
+    left:0vw;
+    display: grid;
+    grid-template-columns: 70% 20%;
+    grid-template-areas: "inputBox addbutton" ;
+    justify-content: space-around;
+
+
+}
+.add{
+    grid-area: "addbutton";
+    width: 20%;
+    color:black;
+    font-size: larger;
+    background-color: orange;
+    border-radius: 30px;
+}
+
+.add:hover{
+    opacity: 0.5;
+}
+
+#inp{
+    grid-area: "inputBox";
+   
+    background-color: grey;
+    width:100%;
+    padding:7px;
+    border-radius: 20px;
+    border-color: black;
+}
+
+#counter{
+    position: absolute;
+    left:45vw;
+    top:20vh;
+    color:black;
+}
