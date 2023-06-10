@@ -1,4 +1,4 @@
- 
+
 
 let hub = document.getElementById("task_hub");
 let list = document.getElementById("task_list");
@@ -25,6 +25,8 @@ function add(){
         task.appendChild(checkb);
         task.innerText = val.value;
         task.style.backgroundColor = "none";
+
+
         let del_btn = document.createElement('BUTTON');
         del_btn.style.width = "5%";
         del_btn.style.height = "30%";
@@ -33,6 +35,7 @@ function add(){
         del_btn.onclick = function(){
             task.style.display= "none";
             localStorage.removeItem("t");
+            save();
         }
         
         let del = document.createElement('IMG')
@@ -41,16 +44,13 @@ function add(){
         del_btn.appendChild(del);
         task.appendChild(del_btn);
         list.appendChild(task);
-        save();
+        save();       
 }
 }
-
 
 function show(){
     list.innerHTML = localStorage.getItem("data");
 }
-
-
 
 show();
 
